@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mental health articles for university students">
+    <title>Articles | Into the Mind</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="main-header">
+        <div class="logo">
+            <h1>Into the Mind</h1>
+            <p>Mental Health Awareness for Students</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="articles.html" aria-current="page">Articles</a></li>
+                <li><a href="self-care.html">Self-Care</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="grid-container">
+        <section class="page-header" aria-labelledby="page-heading">
+            <h1 id="page-heading">Mental Health Articles</h1>
+            <p>Evidence-based information to help you understand and manage your mental health</p>
+        </section>
+
+        <section class="article-categories" aria-labelledby="categories-heading">
+            <h2 id="categories-heading" class="visually-hidden">Article Categories</h2>
+            <div class="category-filters">
+                <a href="#all" class="filter-button active">All Topics</a>
+                <a href="#stress" class="filter-button">Stress</a>
+                <a href="#anxiety" class="filter-button">Anxiety</a>
+                <a href="#depression" class="filter-button">Depression</a>
+                <a href="#mindfulness" class="filter-button">Mindfulness</a>
+                <a href="#sleep" class="filter-button">Sleep</a>
+            </div>
+        </section>
+
+        <section class="featured-article" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Article</h2>
+            <article class="article-card large" data-category="stress mindfulness" id="featured">
+                <div class="article-image">
+                    <img src="images/stress-management.jpg" alt="Person practicing stress management techniques" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Stress Management</span>
+                        <time datetime="2025-05-15">May 15, 2025</time>
+                    </div>
+                    <h3><a href="article-stress-management.html">Managing Academic Stress: 10 Evidence-Based Techniques</a></h3>
+                    <p class="article-excerpt">Discover practical strategies to cope with the pressures of university life while maintaining your mental wellbeing. This article explores techniques backed by psychological research that can help you reduce stress and improve focus.</p>
+                    <a href="article-stress-management.html" class="read-more">Continue Reading</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="article-grid" aria-labelledby="articles-heading">
+            <h2 id="articles-heading">Latest Articles</h2>
+            <div class="articles-container">
+                <article class="article-card" data-category="anxiety" id="article1">
+                    <div class="article-image">
+                        <img src="images/social-anxiety.jpg" alt="Student looking nervous at a social gathering" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Anxiety</span>
+                            <time datetime="2025-05-10">May 10, 2025</time>
+                        </div>
+                        <h3><a href="article-social-anxiety.html">Overcoming Social Anxiety in University Settings</a></h3>
+                        <p class="article-excerpt">Practical tips for managing social anxiety in lectures, group projects, and campus events. Learn how to gradually build confidence in social situations.</p>
+                        <a href="article-social-anxiety.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="depression" id="article2">
+                    <div class="article-image">
+                        <img src="images/winter-blues.jpg" alt="Person looking out a window on a cloudy day" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Depression</span>
+                            <time datetime="2025-05-05">May 5, 2025</time>
+                        </div>
+                        <h3><a href="article-seasonal-depression.html">Recognizing and Coping with Seasonal Depression</a></h3>
+                        <p class="article-excerpt">How to identify seasonal affective disorder (SAD) and strategies to manage symptoms during challenging seasons.</p>
+                        <a href="article-seasonal-depression.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="mindfulness" id="article3">
+                    <div class="article-image">
+                        <img src="images/mindful-studying.jpg" alt="Student practicing mindfulness while studying" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Mindfulness</span>
+                            <time datetime="2025-04-28">April 28, 2025</time>
+                        </div>
+                        <h3><a href="article-mindful-studying.html">Mindful Studying: How to Focus Without Burnout</a></h3>
+                        <p class="article-excerpt">Combine mindfulness techniques with your study routine to improve concentration and reduce exam-related stress.</p>
+                        <a href="article-mindful-studying.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="sleep" id="article4">
+                    <div class="article-image">
+                        <img src="images/sleep-quality.jpg" alt="Alarm clock showing early morning time" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Sleep</span>
+                            <time datetime="2025-04-20">April 20, 2025</time>
+                        </div>
+                        <h3><a href="article-sleep-hygiene.html">Sleep Hygiene for Students: Why It Matters and How to Improve It</a></h3>
+                        <p class="article-excerpt">Understand the connection between sleep and mental health, and learn practical tips for better sleep during your academic journey.</p>
+                        <a href="article-sleep-hygiene.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="stress" id="article5">
+                    <div class="article-image">
+                        <img src="images/time-management.jpg" alt="Organized desk with planner and calendar" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Stress</span>
+                            <time datetime="2025-04-15">April 15, 2025</time>
+                        </div>
+                        <h3><a href="article-time-management.html">Time Management Strategies to Reduce Academic Stress</a></h3>
+                        <p class="article-excerpt">Effective planning techniques that can help you stay on top of coursework while maintaining balance in your personal life.</p>
+                        <a href="article-time-management.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="anxiety depression" id="article6">
+                    <div class="article-image">
+                        <img src="images/therapy-options.jpg" alt="Therapist talking with a young adult" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Mental Health</span>
+                            <time datetime="2025-04-10">April 10, 2025</time>
+                        </div>
+                        <h3><a href="article-therapy-options.html">Understanding Therapy Options for Students</a></h3>
+                        <p class="article-excerpt">A guide to different types of therapy, how to access them as a student, and what to expect from the process.</p>
+                        <a href="article-therapy-options.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="newsletter-signup" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">Get Mental Health Tips Directly to Your Inbox</h2>
+            <p>Subscribe to our monthly newsletter for new articles, resources, and mental health strategies.</p>
+            <form action="#" method="post" class="newsletter-form">
+                <label for="articles-email">Email Address:</label>
+                <input type="email" id="articles-email" name="email" required placeholder="your.email@example.com">
+                <button type="submit" class="submit-button">Subscribe</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>South African Emergency Contacts</h3>
+                <ul>
+                    <li>Suicide Crisis Line: 0800 567 567</li>
+                    <li>SADAG Mental Health Line: 011 234 4837</li>
+                    <li>Lifeline South Africa: 0861 322 322</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Accessibility</h3>
+                <p>We're committed to making our content accessible to all South Africans.</p>
+                <a href="accessibility.html">Accessibility Statement</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Into the Mind. All rights reserved.<br>
+            Mental Health Resources for South African Students</p>
+        </div>
+    </footer>
+</body>
+</html>

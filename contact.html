@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Into the Mind for mental health support and resources">
+    <title>Contact Us | Into the Mind</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="main-header">
+        <div class="logo">
+            <h1>Into the Mind</h1>
+            <p>Mental Health Awareness for Students</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="self-care.html">Self-Care</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="grid-container">
+        <section class="page-header" aria-labelledby="page-heading">
+            <h1 id="page-heading">Contact Us</h1>
+            <p>We're here to help. Reach out with questions, suggestions, or requests for specific resources.</p>
+        </section>
+
+        <section class="contact-form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Send Us a Message</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" required aria-required="true">
+                        <option value="" selected disabled>Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="resources">Resource Request</option>
+                        <option value="feedback">Website Feedback</option>
+                        <option value="support">Mental Health Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                    <label for="consent">I consent to having my data collected and stored according to the <a href="privacy.html">privacy policy</a>. <span class="required">*</span></label>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-info" aria-labelledby="info-heading">
+            <h2 id="info-heading">Other Ways to Reach Us</h2>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:support@intothemind.org">support@intothemind.org</a></p>
+                    <p>Response time: 24-48 hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Emergency Support</h3>
+                    <p>If you're in crisis, please contact:</p>
+                    <ul>
+                        <li>Crisis Text Line: <strong>Text HOME to 741741</strong></li>
+                        <li>National Suicide Prevention Lifeline: <strong>988</strong></li>
+                    </ul>
+                </div>
+
+                <div class="contact-card">
+                    <h3>University Resources</h3>
+                    <p>Most universities offer counseling services. Check your student portal or health center website for local resources.</p>
+                    <p><a href="resources.html#university">View our university resource guide</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-preview" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <div class="accordion">
+        <div class="accordion-item">
+            <input type="checkbox" id="faq1" class="accordion-checkbox">
+            <label for="faq1" class="accordion-button">
+                How quickly can I expect a response to my message?
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </label>
+            <div class="accordion-content">
+                <p>We aim to respond to all inquiries within 24-48 hours during weekdays. Messages received on weekends may take until the next business day for a response.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <input type="checkbox" id="faq2" class="accordion-checkbox">
+            <label for="faq2" class="accordion-button">
+                Can you provide personal mental health advice?
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </label>
+            <div class="accordion-content">
+                <p>While we can provide general information and resources, we are not a substitute for professional mental health care. We recommend contacting licensed professionals or your university counseling center for personal advice.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <input type="checkbox" id="faq3" class="accordion-checkbox">
+            <label for="faq3" class="accordion-button">
+                Are my messages confidential?
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </label>
+            <div class="accordion-content">
+                <p>We treat all communications with strict confidentiality. However, if we believe there is immediate risk of harm to yourself or others, we may need to contact emergency services. For more details, please review our <a href="privacy.html">privacy policy</a>.</p>
+            </div>
+        </div>
+    </div>
+    <p class="more-faq-link"><a href="resources.html#faq">View more FAQs in our Resources section</a></p>
+</section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>South African Emergency Contacts</h3>
+                <ul>
+                    <li>Suicide Crisis Line: 0800 567 567</li>
+                    <li>SADAG Mental Health Line: 011 234 4837</li>
+                    <li>Lifeline South Africa: 0861 322 322</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Accessibility</h3>
+                <p>We're committed to making our content accessible to all South Africans.</p>
+                <a href="accessibility.html">Accessibility Statement</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Into the Mind. All rights reserved. <br>
+            Mental Health Resources for South African Students</p>
+        </div>
+    </footer>
+</body>
+</html>
