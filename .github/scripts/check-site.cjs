@@ -33,7 +33,7 @@ async function checkWidth(page, label) {
       await page.keyboard.press('Tab');
       assert.equal(await page.locator(':focus').getAttribute('class'), 'skip-link', file);
       assert.equal(await page.locator('form input:not([disabled]),form textarea:not([disabled]),form select:not([disabled]),form button:not([disabled])').count(), 0, file);
-      for (const width of [390, 1440]) {
+      for (const width of [360, 390, 768, 1440]) {
         await page.setViewportSize({width, height:900});
         await checkWidth(page, file + ' width ' + width);
       }
@@ -52,3 +52,4 @@ async function checkWidth(page, label) {
     await browser.close();
   }
 })().catch(error => { console.error(error.stack); process.exit(1); });
+

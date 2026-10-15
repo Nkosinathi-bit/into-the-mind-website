@@ -31,3 +31,4 @@ jobs:
           site_server_pid=$!
           trap 'kill "$site_server_pid"' EXIT
           PLAYWRIGHT_MODULE_PATH="$RUNNER_TEMP/site-check/node_modules/playwright" node .github/scripts/check-site.cjs
+

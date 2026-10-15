@@ -4,7 +4,7 @@
 
 **Academic web development project · HTML and CSS**
 
-A multipage HTML and CSS website exploring student wellbeing and mental-health awareness.
+A multipage HTML and CSS website exploring student wellbeing and mental-health awareness. Its visual system uses warm cream, forest green, sage, lavender and peach, with editorial typography, an original SVG illustration and responsive reading layouts.
 
 This academic web development project focuses on page structure, responsive layouts, navigation and accessibility features.
 
@@ -50,10 +50,12 @@ Accessibility features are included in the source; this is not a claim of indepe
 - `contact.html` — contact form demonstration and FAQs
 - `accessibility.html` — accessibility features and limitations
 - `styles.css` — shared styles
-- `*.jpg` — images stored at the repository root
+- `assets/` — the original SVG brand mark and calm window illustration
+- `*.jpg` — article images stored at the repository root
 
 ## Current scope
 
 The site is static HTML and CSS. It has no server, account system, mailing list or message storage.
 
 **Author:** Nkosinathi Mathenjwa
+

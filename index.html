@@ -3,108 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mental health resources for university students">
-    <title>Into the Mind - Mental Health Awareness</title>
+    <meta name="description" content="A calmer corner of student life. Explore student wellbeing reading, self-care ideas and South African support resources.">
+    <meta name="theme-color" content="#244d3f">
+    <title>Into the Mind | A little room to grow</title>
+    <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="main-header">
-        <div class="logo">
-            <h1>Into the Mind</h1>
-            <p>Mental Health Awareness for Students</p>
-        </div>
-        <nav aria-label="Main navigation">
-            <ul class="nav-menu">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="self-care.html">Self-Care</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <a class="brand" href="index.html" aria-label="Into the Mind home">
+            <img src="assets/brand-mark.svg" width="44" height="44" alt="">
+            <span><strong>Into the Mind</strong><small>A little room to grow.</small></span>
+        </a>
+        <nav aria-label="Main navigation"><ul class="nav-menu"><li><a href="index.html" aria-current="page">Home</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="articles.html">Articles</a></li>
+<li><a href="self-care.html">Self-care</a></li>
+<li><a href="contact.html">Contact</a></li></ul></nav>
     </header>
-
-    <main id="main-content" class="grid-container">
-        <section class="hero" aria-labelledby="hero-heading">
-            <h1 id="hero-heading">Supporting Student Mental Health</h1>
-            <p>Navigating university life can be challenging. We're here to help you find balance and support.</p>
-            <a href="resources.html" class="cta-button">Explore Resources</a>
+    <main id="main-content" class="home-container">
+        <section class="home-hero" aria-labelledby="hero-heading">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> STUDENT LIFE. A LITTLE LIGHTER.</p>
+                <h1 id="hero-heading">A little space<br>for <em>your mind.</em></h1>
+                <p class="hero-description">University life can be a lot. Find everyday self-care ideas, thoughtful reading and ways to reach support — at your own pace.</p>
+                <div class="hero-actions">
+                    <a href="resources.html" class="cta-button">Find your starting point <span aria-hidden="true">↗</span></a>
+                    <a href="self-care.html" class="text-link">Explore self-care <span aria-hidden="true">→</span></a>
+                </div>
+                <p class="hero-note"><span aria-hidden="true">✳</span> Small steps count. You don’t need to have it all figured out.</p>
+            </div>
+            <div class="hero-art">
+                <img class="quiet-illustration" src="assets/quiet-moment.svg" width="600" height="650" alt="A quiet moment by a window, with a plant, an open book and a warm drink.">
+                <div class="gentle-note"><span aria-hidden="true">✧</span><span>There’s room to<br><em>begin again.</em></span></div>
+                <p class="art-caption">GROW AT YOUR OWN PACE</p>
+            </div>
         </section>
 
-        <section class="quick-links" aria-labelledby="quick-links-heading">
-            <h2 id="quick-links-heading">Quick Access</h2>
-            <ul class="link-cards">
-                <li>
-                    <a href="articles.html#featured">
-                        <h3>Managing Stress</h3>
-                        <p>Tips for handling academic pressure</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="articles.html#article1">
-                        <h3>Anxiety Relief</h3>
-                        <p>Techniques to calm your mind</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="self-care.html">
-                        <h3>Self-Care Guide</h3>
-                        <p>Daily practices for mental wellness</p>
-                    </a>
-                </li>
+        <section class="starting-points" aria-labelledby="starting-heading">
+            <div class="section-intro"><div><p class="eyebrow">WHEREVER YOU ARE TODAY</p><h2 id="starting-heading">Find a softer starting point.</h2></div><p>You don’t have to do everything.<br>Start with what feels useful.</p></div>
+            <ul class="path-cards">
+                <li class="path-card sage-card"><a href="articles.html#featured"><span class="path-icon" aria-hidden="true">✳</span><span class="card-kicker">WHEN IT FEELS LIKE A LOT</span><h3>Make room for calm.</h3><p>Read about stress, study pressure and finding a little balance.</p><span class="card-link">Explore the articles <span aria-hidden="true">↗</span></span></a></li>
+                <li class="path-card lavender-card"><a href="self-care.html"><span class="path-icon" aria-hidden="true">☼</span><span class="card-kicker">A LITTLE EVERY DAY</span><h3>Come back to yourself.</h3><p>Discover self-care ideas and a gentle seven-day challenge.</p><span class="card-link">Find a small practice <span aria-hidden="true">↗</span></span></a></li>
+                <li class="path-card peach-card"><a href="resources.html"><span class="path-icon" aria-hidden="true">♡</span><span class="card-kicker">YOU DON’T HAVE TO DO IT ALONE</span><h3>Find a way to support.</h3><p>Browse South African resource links and university services.</p><span class="card-link">Browse the directory <span aria-hidden="true">↗</span></span></a></li>
             </ul>
         </section>
 
-        <section class="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About This Project</h2>
-            <p>"Into the Mind" is an initiative to provide accessible mental health resources for university students. We believe that mental health is just as important as physical health, and we aim to break the stigma surrounding mental health discussions in academic environments.</p>
-            <p>Our content is carefully curated to address common challenges faced by students, including stress, anxiety, depression, and maintaining healthy relationships.</p>
+        <section class="reading-section" aria-labelledby="reading-heading">
+            <div class="section-intro"><div><p class="eyebrow">A MOMENT TO UNDERSTAND</p><h2 id="reading-heading">Something worth pausing for.</h2></div><a class="text-link" href="articles.html">All articles <span aria-hidden="true">→</span></a></div>
+            <div class="home-article-grid">
+                <a class="reading-card" href="article-mindful-studying.html"><img src="mindful-studying.jpg" alt="A quiet study setting" loading="lazy"><div><span class="card-kicker">STUDY &amp; BALANCE</span><h3>Mindful studying, without the burnout.</h3><p>A different way to think about focus and taking breaks.</p><span class="text-link">Read the article <span aria-hidden="true">↗</span></span></div></a>
+                <a class="reading-card" href="article-sleep-hygiene.html"><img src="sleep-quality.jpg" alt="A restful evening setting" loading="lazy"><div><span class="card-kicker">REST &amp; ROUTINE</span><h3>Make a little more room for rest.</h3><p>Explore the sleep-hygiene article in our student reading collection.</p><span class="text-link">Read the article <span aria-hidden="true">↗</span></span></div></a>
+            </div>
         </section>
 
-        <aside class="newsletter" aria-labelledby="newsletter-heading">
-            <h2 id="newsletter-heading">Stay Updated</h2>
-            <form action="#" method="post" class="newsletter-form" aria-describedby="demo-form-note">
-                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required placeholder="your.email@example.com" disabled>
-                <button type="submit" disabled>Subscribe</button>
-            </form>
-            <p>Get monthly mental health tips and resources</p>
-        </aside>
+        <section class="gentle-banner" aria-labelledby="gentle-heading"><span class="banner-symbol" aria-hidden="true">✳</span><div><p class="eyebrow">A SMALL REMINDER</p><h2 id="gentle-heading">You’re a person.<br><em>Not just a deadline.</em></h2><p>Make room for yourself alongside everything else.</p></div><a href="self-care.html" class="cta-button light-button">Take a little time <span aria-hidden="true">↗</span></a></section>
     </main>
-
-     <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>South African Emergency Contacts</h3>
-                <ul>
-                    <li>Suicide Crisis Line: 0800 567 567</li>
-                    <li>SADAG Mental Health Line: 011 234 4837</li>
-                    <li>Lifeline South Africa: 0861 322 322</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Accessibility</h3>
-                <p>We're committed to making our content accessible to all South Africans.</p>
-                <a href="accessibility.html">Accessibility Statement</a>
-            </div>
+            <div class="footer-section footer-brand"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" width="44" height="44" alt=""><span><strong>Into the Mind</strong><small>A little room to grow.</small></span></a><p>Student wellbeing, one small step at a time.</p></div>
+            <div class="footer-section"><h3>Find your way</h3><ul><li><a href="resources.html">Resource directory</a></li><li><a href="articles.html">Thoughtful reading</a></li><li><a href="self-care.html">Everyday self-care</a></li></ul></div>
+            <div class="footer-section"><h3>About this space</h3><p>A student web development project exploring wellbeing awareness.</p><a href="accessibility.html">Accessibility &amp; project scope</a><br><a href="contact.html">Contact page</a></div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Into the Mind. All rights reserved.<br>
-            Mental Health Resources for South African Students</p> 
-
-
-        </div>
+        <div class="copyright"><p>© 2026 Into the Mind · Made with room to breathe.</p><p>South African student wellbeing awareness</p></div>
     </footer>
 </body>
-
 </html>
