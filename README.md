@@ -8,6 +8,29 @@ A multipage HTML and CSS website exploring student wellbeing and mental-health a
 
 This academic web development project focuses on page structure, responsive layouts, navigation and accessibility features.
 
+## Visual preview
+
+Actual Chromium browser captures of the running site. 
+
+![Into the Mind — desktop browser screenshot](docs/screenshots/desktop.jpg)
+
+
+<details>
+<summary>Article collection preview</summary>
+
+![Into the Mind article collection](docs/screenshots/articles.jpg)
+
+</details>
+
+<details>
+<summary>Mobile browser preview</summary>
+
+<img src="docs/screenshots/mobile.jpg" alt="Into the Mind — mobile browser screenshot" width="300">
+
+</details>
+
+Desktop: 1440 × 1000 · Mobile: 390 × 844. [Capture source and provenance](docs/screenshots/capture.json).
+
 ## What is included
 
 - A home page and a directory of student resources.
