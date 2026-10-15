@@ -1,5 +1,9 @@
 # Into The Mind
 
+[![Checks](https://github.com/Nkosinathi-bit/into-the-mind-website/actions/workflows/site-check.yml/badge.svg)](https://github.com/Nkosinathi-bit/into-the-mind-website/actions/workflows/site-check.yml)
+
+**Academic web development project · HTML and CSS**
+
 A multipage HTML and CSS website exploring student wellbeing and mental-health awareness.
 
 This academic web development project focuses on page structure, responsive layouts, navigation and accessibility features.
