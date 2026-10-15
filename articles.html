@@ -33,14 +33,14 @@
         </section>
 
         <section class="article-categories" aria-labelledby="categories-heading">
-            <h2 id="categories-heading" class="visually-hidden">Article Categories</h2>
+            <h2 id="categories-heading" class="visually-hidden">Browse Article Topics</h2>
             <div class="category-filters">
-                <a href="#all" class="filter-button active">All Topics</a>
-                <a href="#stress" class="filter-button">Stress</a>
-                <a href="#anxiety" class="filter-button">Anxiety</a>
-                <a href="#depression" class="filter-button">Depression</a>
-                <a href="#mindfulness" class="filter-button">Mindfulness</a>
-                <a href="#sleep" class="filter-button">Sleep</a>
+                <a href="#featured-heading" class="filter-button active">All Topics</a>
+                <a href="#featured" class="filter-button">Stress</a>
+                <a href="#article1" class="filter-button">Anxiety</a>
+                <a href="#article2" class="filter-button">Depression</a>
+                <a href="#featured" class="filter-button">Mindfulness</a>
+                <a href="#article4" class="filter-button">Sleep</a>
             </div>
         </section>
 
@@ -48,7 +48,7 @@
             <h2 id="featured-heading">Featured Article</h2>
             <article class="article-card large" data-category="stress mindfulness" id="featured">
                 <div class="article-image">
-                    <img src="images/stress-management.jpg" alt="Person practicing stress management techniques" loading="lazy">
+                    <img src="stress-management.jpg" alt="Person practicing stress management techniques" loading="lazy">
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
@@ -67,7 +67,7 @@
             <div class="articles-container">
                 <article class="article-card" data-category="anxiety" id="article1">
                     <div class="article-image">
-                        <img src="images/social-anxiety.jpg" alt="Student looking nervous at a social gathering" loading="lazy">
+                        <img src="social-anxiety.jpg" alt="Student looking nervous at a social gathering" loading="lazy">
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -82,7 +82,7 @@
 
                 <article class="article-card" data-category="depression" id="article2">
                     <div class="article-image">
-                        <img src="images/winter-blues.jpg" alt="Person looking out a window on a cloudy day" loading="lazy">
+                        <img src="winter-blues.jpg" alt="Person looking out a window on a cloudy day" loading="lazy">
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -97,7 +97,7 @@
 
                 <article class="article-card" data-category="mindfulness" id="article3">
                     <div class="article-image">
-                        <img src="images/mindful-studying.jpg" alt="Student practicing mindfulness while studying" loading="lazy">
+                        <img src="mindful-studying.jpg" alt="Student practicing mindfulness while studying" loading="lazy">
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -112,7 +112,7 @@
 
                 <article class="article-card" data-category="sleep" id="article4">
                     <div class="article-image">
-                        <img src="images/sleep-quality.jpg" alt="Alarm clock showing early morning time" loading="lazy">
+                        <img src="sleep-quality.jpg" alt="Alarm clock showing early morning time" loading="lazy">
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -127,7 +127,7 @@
 
                 <article class="article-card" data-category="stress" id="article5">
                     <div class="article-image">
-                        <img src="images/time-management.jpg" alt="Organized desk with planner and calendar" loading="lazy">
+                        <img src="time-management.jpg" alt="Organized desk with planner and calendar" loading="lazy">
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -142,7 +142,7 @@
 
                 <article class="article-card" data-category="anxiety depression" id="article6">
                     <div class="article-image">
-                        <img src="images/therapy-options.jpg" alt="Therapist talking with a young adult" loading="lazy">
+                        <img src="therapy-options.jpg" alt="Therapist talking with a young adult" loading="lazy">
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -160,10 +160,11 @@
         <aside class="newsletter-signup" aria-labelledby="newsletter-heading">
             <h2 id="newsletter-heading">Get Mental Health Tips Directly to Your Inbox</h2>
             <p>Subscribe to our monthly newsletter for new articles, resources, and mental health strategies.</p>
-            <form action="#" method="post" class="newsletter-form">
+            <form action="#" method="post" class="newsletter-form" aria-describedby="demo-form-note">
+                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
                 <label for="articles-email">Email Address:</label>
-                <input type="email" id="articles-email" name="email" required placeholder="your.email@example.com">
-                <button type="submit" class="submit-button">Subscribe</button>
+                <input type="email" id="articles-email" name="email" required placeholder="your.email@example.com" disabled>
+                <button type="submit" class="submit-button" disabled>Subscribe</button>
             </form>
         </aside>
     </main>

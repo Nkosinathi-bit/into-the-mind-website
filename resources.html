@@ -195,10 +195,11 @@
         <aside class="resource-newsletter" aria-labelledby="newsletter-heading">
             <h2 id="newsletter-heading">Stay Updated</h2>
             <p>Get monthly mental health resources for South African students</p>
-            <form action="#" method="post" class="newsletter-form">
+            <form action="#" method="post" class="newsletter-form" aria-describedby="demo-form-note">
+                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                <button type="submit" class="submit-button">Subscribe</button>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com" disabled>
+                <button type="submit" class="submit-button" disabled>Subscribe</button>
             </form>
         </aside>
     </main>

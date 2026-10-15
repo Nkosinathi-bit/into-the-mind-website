@@ -1,0 +1,33 @@
+name: Check website
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install browser check tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/site-check" --no-save --package-lock=false playwright@1.62.1
+          "$RUNNER_TEMP/site-check/node_modules/.bin/playwright" install --with-deps chromium
+
+      - name: Check website in Chromium
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/site-server.log" 2>&1 &
+          site_server_pid=$!
+          trap 'kill "$site_server_pid"' EXIT
+          PLAYWRIGHT_MODULE_PATH="$RUNNER_TEMP/site-check/node_modules/playwright" node .github/scripts/check-site.cjs

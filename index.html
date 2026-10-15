@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="main-header">
         <div class="logo">
             <h1>Into the Mind</h1>
@@ -24,7 +25,7 @@
         </nav>
     </header>
 
-    <main class="grid-container">
+    <main id="main-content" class="grid-container">
         <section class="hero" aria-labelledby="hero-heading">
             <h1 id="hero-heading">Supporting Student Mental Health</h1>
             <p>Navigating university life can be challenging. We're here to help you find balance and support.</p>
@@ -35,13 +36,13 @@
             <h2 id="quick-links-heading">Quick Access</h2>
             <ul class="link-cards">
                 <li>
-                    <a href="articles.html#stress">
+                    <a href="articles.html#featured">
                         <h3>Managing Stress</h3>
                         <p>Tips for handling academic pressure</p>
                     </a>
                 </li>
                 <li>
-                    <a href="articles.html#anxiety">
+                    <a href="articles.html#article1">
                         <h3>Anxiety Relief</h3>
                         <p>Techniques to calm your mind</p>
                     </a>
@@ -63,10 +64,11 @@
 
         <aside class="newsletter" aria-labelledby="newsletter-heading">
             <h2 id="newsletter-heading">Stay Updated</h2>
-            <form action="#" method="post" class="newsletter-form">
+            <form action="#" method="post" class="newsletter-form" aria-describedby="demo-form-note">
+                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                <button type="submit">Subscribe</button>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com" disabled>
+                <button type="submit" disabled>Subscribe</button>
             </form>
             <p>Get monthly mental health tips and resources</p>
         </aside>
