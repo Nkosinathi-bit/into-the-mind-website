@@ -1593,3 +1593,13 @@ figcaption {
 .demo-note { padding: .75rem; border-left: 3px solid #4a6fa5; background: #f2f5fa; color: #26374d; }
 button:disabled, input:disabled, select:disabled, textarea:disabled { cursor: not-allowed; opacity: .7; }
 [id] { scroll-margin-top: 1rem; }
+
+/* Let navigation and grid items fit narrow viewports. */
+.main-header > *, .grid-container > * { min-width: 0; }
+.nav-menu { flex-wrap: wrap; gap: .5rem 1.5rem; }
+.nav-menu li { margin-left: 0; }
+@media (max-width: 768px) {
+    .main-header { grid-template-columns: minmax(0, 1fr); }
+    .nav-menu { gap: .5rem; }
+    .nav-menu a { display: block; padding: .5rem .75rem; }
+}

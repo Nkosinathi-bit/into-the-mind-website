@@ -38,7 +38,7 @@ async function checkWidth(page, label) {
         await checkWidth(page, file + ' width ' + width);
       }
       for (const src of await page.locator('img').evaluateAll(images => images.map(image => image.getAttribute('src')))) {
-        assert.equal((await context.request.get(new URL(src, base))).status(), 200, file + ': ' + src);
+        assert.equal((await context.request.get(new URL(src, base).toString())).status(), 200, file + ': ' + src);
       }
     }
     await page.goto(base + '/articles.html', {waitUntil:'domcontentloaded'});
