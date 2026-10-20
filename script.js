@@ -276,6 +276,9 @@
         form.elements.subject.options[0].disabled = true;
         form.addEventListener('submit', event => {
             event.preventDefault();
+            for (const field of [form.elements.name, form.elements.message]) {
+                field.setCustomValidity(field.value.trim() ? '' : 'Please enter more than spaces.');
+            }
             if (!form.reportValidity()) return;
             const subject = form.elements.subject.selectedOptions[0].textContent;
             const text = `Message draft — not sent\n\nFrom: ${form.elements.name.value.trim()}\nEmail: ${form.elements.email.value.trim()}\nSubject: ${subject}\n\n${form.elements.message.value.trim()}`;
@@ -287,7 +290,10 @@
             preview.focus();
             announce('Your message preview is ready. Nothing has been sent.');
         });
-        form.addEventListener('input', clearPreview);
+        form.addEventListener('input', event => {
+            if (event.target === form.elements.name || event.target === form.elements.message) event.target.setCustomValidity('');
+            clearPreview();
+        });
         form.addEventListener('change', clearPreview);
         form.addEventListener('reset', clearPreview);
         window.addEventListener('pagehide', clearPreview);

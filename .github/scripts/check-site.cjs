@@ -98,7 +98,8 @@ async function checkWidth(page, label) {
     assert.match(await page.locator('[data-challenge-summary]').textContent(), /7 of 7 complete/);
 
     // Advance a controlled clock instead of waiting a full study session.
-    await page.clock.install();
+    await page.clock.install({time:new Date('2026-10-20T12:00:00Z')});
+    await page.clock.pauseAt(new Date('2026-10-20T12:00:01Z'));
     await page.getByLabel('Make time for').selectOption('60');
     assert.equal(await page.locator('[data-timer-display]').textContent(), '01:00');
     await page.getByRole('button', {name:'Start timer', exact:true}).click();
@@ -118,7 +119,7 @@ async function checkWidth(page, label) {
     assert.equal(await page.locator('[data-timer-display]').textContent(), '01:00');
     await page.getByLabel('Make time for').selectOption('300');
     assert.equal(await page.locator('[data-timer-display]').textContent(), '05:00');
-    await page.clock.uninstall();
+    await page.clock.resume();
 
     // Drafts are validated, rendered as text and downloaded without network submission.
     await page.goto(base + '/contact.html');
