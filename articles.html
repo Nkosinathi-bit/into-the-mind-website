@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#244d3f">
     <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -24,7 +25,7 @@
 <li><a href="contact.html">Contact</a></li></ul></nav>
     </header>
 
-    <main id="main-content" class="grid-container">
+    <main id="main-content" class="grid-container" data-article-browser>
         <section class="page-header" aria-labelledby="page-heading">
             <h1 id="page-heading">Mental Health Articles</h1>
             <p>Evidence-based information to help you understand and manage your mental health</p>
@@ -32,14 +33,24 @@
 
         <section class="article-categories" aria-labelledby="categories-heading">
             <h2 id="categories-heading" class="visually-hidden">Browse Article Topics</h2>
-            <div class="category-filters">
-                <a href="#featured-heading" class="filter-button active">All Topics</a>
-                <a href="#featured" class="filter-button">Stress</a>
-                <a href="#article1" class="filter-button">Anxiety</a>
-                <a href="#article2" class="filter-button">Depression</a>
-                <a href="#featured" class="filter-button">Mindfulness</a>
-                <a href="#article4" class="filter-button">Sleep</a>
+            <div data-js-only hidden>
+                <div class="article-search-row">
+                    <div class="search-field"><label for="article-search">Find something to read</label><input type="search" id="article-search" placeholder="Search articles, topics or keywords" aria-controls="featured article-list"></div>
+                    <label class="saved-filter" for="saved-only"><input type="checkbox" id="saved-only"> Saved only (<span data-saved-count>0</span>)</label>
+                </div>
+                <div class="category-filters" role="group" aria-label="Filter articles by topic">
+                    <button type="button" class="filter-button active" data-topic="all" aria-pressed="true">All Topics</button>
+                    <button type="button" class="filter-button" data-topic="stress" aria-pressed="false">Stress</button>
+                    <button type="button" class="filter-button" data-topic="anxiety" aria-pressed="false">Anxiety</button>
+                    <button type="button" class="filter-button" data-topic="depression" aria-pressed="false">Depression</button>
+                    <button type="button" class="filter-button" data-topic="mindfulness" aria-pressed="false">Mindfulness</button>
+                    <button type="button" class="filter-button" data-topic="sleep" aria-pressed="false">Sleep</button>
+                </div>
+                <div class="filter-summary"><p id="article-results" role="status" aria-atomic="true"></p><button type="button" class="text-button" data-clear-filters>Reset filters</button></div>
+                <p class="storage-note" data-storage-note></p>
+                <p id="article-empty" class="empty-state" hidden>No articles match yet. Try another topic, search or reset your filters.</p>
             </div>
+            <noscript><p>Browse all articles below. Enable JavaScript to search, filter and save your favourites.</p></noscript>
         </section>
 
         <section class="featured-article" aria-labelledby="featured-heading">
@@ -56,13 +67,14 @@
                     <h3><a href="article-stress-management.html">Managing Academic Stress: 10 Evidence-Based Techniques</a></h3>
                     <p class="article-excerpt">Discover practical strategies to cope with the pressures of university life while maintaining your mental wellbeing. This article explores techniques backed by psychological research that can help you reduce stress and improve focus.</p>
                     <a href="article-stress-management.html" class="read-more">Continue Reading</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-stress-management.html" hidden>Save for later</button>
                 </div>
             </article>
         </section>
 
         <section class="article-grid" aria-labelledby="articles-heading">
             <h2 id="articles-heading">Latest Articles</h2>
-            <div class="articles-container">
+            <div class="articles-container" id="article-list">
                 <article class="article-card" data-category="anxiety" id="article1">
                     <div class="article-image">
                         <img src="social-anxiety.jpg" alt="Student looking nervous at a social gathering" loading="lazy">
@@ -75,6 +87,7 @@
                         <h3><a href="article-social-anxiety.html">Overcoming Social Anxiety in University Settings</a></h3>
                         <p class="article-excerpt">Practical tips for managing social anxiety in lectures, group projects, and campus events. Learn how to gradually build confidence in social situations.</p>
                         <a href="article-social-anxiety.html" class="read-more">Read Article</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-social-anxiety.html" hidden>Save for later</button>
                     </div>
                 </article>
 
@@ -90,6 +103,7 @@
                         <h3><a href="article-seasonal-depression.html">Recognizing and Coping with Seasonal Depression</a></h3>
                         <p class="article-excerpt">How to identify seasonal affective disorder (SAD) and strategies to manage symptoms during challenging seasons.</p>
                         <a href="article-seasonal-depression.html" class="read-more">Read Article</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-seasonal-depression.html" hidden>Save for later</button>
                     </div>
                 </article>
 
@@ -105,6 +119,7 @@
                         <h3><a href="article-mindful-studying.html">Mindful Studying: How to Focus Without Burnout</a></h3>
                         <p class="article-excerpt">Combine mindfulness techniques with your study routine to improve concentration and reduce exam-related stress.</p>
                         <a href="article-mindful-studying.html" class="read-more">Read Article</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-mindful-studying.html" hidden>Save for later</button>
                     </div>
                 </article>
 
@@ -120,6 +135,7 @@
                         <h3><a href="article-sleep-hygiene.html">Sleep Hygiene for Students: Why It Matters and How to Improve It</a></h3>
                         <p class="article-excerpt">Understand the connection between sleep and mental health, and learn practical tips for better sleep during your academic journey.</p>
                         <a href="article-sleep-hygiene.html" class="read-more">Read Article</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-sleep-hygiene.html" hidden>Save for later</button>
                     </div>
                 </article>
 
@@ -135,6 +151,7 @@
                         <h3><a href="article-time-management.html">Time Management Strategies to Reduce Academic Stress</a></h3>
                         <p class="article-excerpt">Effective planning techniques that can help you stay on top of coursework while maintaining balance in your personal life.</p>
                         <a href="article-time-management.html" class="read-more">Read Article</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-time-management.html" hidden>Save for later</button>
                     </div>
                 </article>
 
@@ -150,20 +167,38 @@
                         <h3><a href="article-therapy-options.html">Understanding Therapy Options for Students</a></h3>
                         <p class="article-excerpt">A guide to different types of therapy, how to access them as a student, and what to expect from the process.</p>
                         <a href="article-therapy-options.html" class="read-more">Read Article</a>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-therapy-options.html" hidden>Save for later</button>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="anxiety" id="article7">
+                    <div class="article-image"><img src="anxiety-relief.jpg" alt="A quiet moment for reflection" loading="lazy"></div>
+                    <div class="article-content">
+                        <div class="article-meta"><span class="article-category">Anxiety</span></div>
+                        <h3><a href="article-anxiety.html">Understanding Anxiety</a></h3>
+                        <p class="article-excerpt">Explore the anxiety article in our student reading collection.</p>
+                        <a href="article-anxiety.html" class="read-more">Read Article</a>
+                        <button type="button" class="secondary-button save-button" data-save-article="article-anxiety.html" hidden>Save for later</button>
                     </div>
                 </article>
             </div>
         </section>
 
         <aside class="newsletter-signup" aria-labelledby="newsletter-heading">
-            <h2 id="newsletter-heading">Get Mental Health Tips Directly to Your Inbox</h2>
-            <p>Subscribe to our monthly newsletter for new articles, resources, and mental health strategies.</p>
-            <form action="#" method="post" class="newsletter-form" aria-describedby="demo-form-note">
-                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
-                <label for="articles-email">Email Address:</label>
-                <input type="email" id="articles-email" name="email" required placeholder="your.email@example.com" disabled>
-                <button type="submit" class="submit-button" disabled>Subscribe</button>
+            <h2 id="newsletter-heading">Build a little reading plan</h2>
+            <p>Choose a topic and find your next small read.</p>
+            <form action="articles.html" method="get" class="newsletter-form reading-plan-form" data-reading-plan>
+                <label for="reading-topic">What would you like to explore?</label>
+                <select id="reading-topic" name="topic">
+                    <option value="stress">Study stress &amp; balance</option>
+                    <option value="anxiety">Understanding anxiety</option>
+                    <option value="depression">Understanding depression</option>
+                    <option value="mindfulness">Mindful studying</option>
+                    <option value="sleep">Rest &amp; sleep</option>
+                </select>
+                <button type="submit" class="submit-button">Build my reading plan</button>
             </form>
+            <div class="reading-plan-result" data-plan-result tabindex="-1" hidden></div>
         </aside>
     </main>
 
