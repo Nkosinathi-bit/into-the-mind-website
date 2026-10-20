@@ -130,7 +130,7 @@ async function checkWidth(page, label) {
     await page.getByLabel('Full Name').fill('Student Example');
     await page.getByLabel('Email Address', {exact:false}).fill('invalid-email');
     await page.getByLabel('Subject', {exact:false}).selectOption('feedback');
-    await page.getByLabel('Your Message').fill('<img src=x onerror=alert(1)> Feedback about the website.');
+    await page.locator('[data-message-form]').getByLabel('Your Message').fill('<img src=x onerror=alert(1)> Feedback about the website.');
     await page.getByRole('button', {name:'Preview message', exact:true}).click();
     assert.equal(await page.locator('[data-message-preview]').isVisible(), false);
     await page.getByLabel('Email Address', {exact:false}).fill('student@example.com');
@@ -144,7 +144,7 @@ async function checkWidth(page, label) {
     const download = await downloadPromise;
     assert.equal(download.suggestedFilename(), 'into-the-mind-message.txt');
     assert.match(fs.readFileSync(await download.path(), 'utf8'), /student@example.com/);
-    await page.getByLabel('Your Message').fill('An updated draft.');
+    await page.locator('[data-message-form]').getByLabel('Your Message').fill('An updated draft.');
     assert.equal(await page.locator('[data-message-preview]').isVisible(), false);
     await page.getByRole('button', {name:'Preview message', exact:true}).click();
     await page.getByRole('button', {name:'Clear form', exact:true}).click();
