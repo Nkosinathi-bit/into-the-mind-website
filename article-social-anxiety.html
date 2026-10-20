@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#244d3f">
     <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -104,7 +105,9 @@
                     </ul>
                 </div>
                 <div class="article-actions">
-                    <button class="print-button" onclick="window.print()">Print Article</button>
+                    <button type="button" class="print-button" onclick="window.print()">Print Article</button>
+                    <button type="button" class="secondary-button save-button" data-save-article="article-social-anxiety.html" hidden>Save for later</button>
+                    <a href="articles.html?saved=1" class="text-link">My saved articles</a>
                     <a href="contact.html" class="contact-button">Ask a Question</a>
                 </div>
             </footer>

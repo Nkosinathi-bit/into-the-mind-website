@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Into the Mind for mental health support and resources">
+    <meta name="description" content="Preview a message draft and explore FAQs for the Into the Mind student project.">
     <title>Contact Us | Into the Mind</title>
     <meta name="theme-color" content="#244d3f">
     <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -27,21 +28,22 @@
     <main id="main-content" class="grid-container">
         <section class="page-header" aria-labelledby="page-heading">
             <h1 id="page-heading">Contact Us</h1>
-            <p>Explore the contact form layout and FAQs for this student website project.</p>
+            <p>Prepare a message draft and explore FAQs for this student website project.</p>
         </section>
 
         <section class="contact-form-section" aria-labelledby="form-heading">
-            <h2 id="form-heading">Send Us a Message</h2>
-            <form class="contact-form" action="#" method="post" aria-describedby="demo-form-note">
-                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
+            <h2 id="form-heading">Prepare a Message</h2>
+            <form class="contact-form" action="#" method="post" data-message-form aria-describedby="demo-form-note">
+                <p id="demo-form-note" class="demo-note">Preview and download a message draft. Nothing is sent or stored by this website.</p>
+                <noscript><p>Enable JavaScript to preview a draft. Message delivery is unavailable.</p></noscript>
                 <div class="form-group">
                     <label for="name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required aria-required="true" disabled>
+                    <input type="text" id="name" name="name" maxlength="100" autocomplete="name" required aria-required="true" disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required aria-required="true" disabled>
+                    <input type="email" id="email" name="email" maxlength="254" autocomplete="email" required aria-required="true" disabled>
                 </div>
 
                 <div class="form-group">
@@ -58,14 +60,20 @@
 
                 <div class="form-group">
                     <label for="message">Your Message <span class="required">*</span></label>
-                    <textarea id="message" name="message" rows="6" required aria-required="true" disabled></textarea>
+                    <textarea id="message" name="message" rows="6" maxlength="5000" required aria-required="true" disabled></textarea>
                 </div>
 
                 
 
-                <button type="submit" class="submit-button" disabled>Send Message</button>
+                <div class="message-actions"><button type="submit" class="submit-button" disabled>Preview message</button><button type="reset" class="secondary-button" disabled>Clear form</button></div>
             </form>
-            <p id="demo-privacy" class="demo-note">This demonstration has no message storage or delivery service. The form controls are inactive.</p>
+            <section class="message-preview" data-message-preview tabindex="-1" aria-labelledby="preview-heading" hidden>
+                <h3 id="preview-heading">Your message draft</h3>
+                <p>Review your draft below. Nothing has been sent.</p>
+                <pre></pre>
+                <a class="submit-button" data-download-message download="into-the-mind-message.txt">Download message (.txt)</a>
+            </section>
+            <p id="demo-privacy" class="demo-note">Your draft stays on this page until you clear it or leave. Downloading saves a text file on your device. This student project does not offer a message delivery or response service.</p>
         </section>
 
         <section class="contact-info" aria-labelledby="info-heading">
@@ -101,7 +109,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </label>
             <div class="accordion-content">
-                <p>The form is an inactive layout demonstration. It does not send messages or provide a response service.</p>
+                <p>You can validate, preview and download a message draft. The website does not send messages or provide a response service.</p>
             </div>
         </div>
 
@@ -123,7 +131,7 @@
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </label>
             <div class="accordion-content">
-                <p>The demonstration does not receive or store form submissions. See the <a href="#demo-privacy">form information</a>.</p>
+                <p>Message drafts are held on this page only. They are not saved in browser storage or sent to a server. You can choose to download your draft as a text file. See the <a href="#demo-privacy">form information</a>.</p>
             </div>
         </div>
     </div>

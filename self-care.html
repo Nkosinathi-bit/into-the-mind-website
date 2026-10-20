@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#244d3f">
     <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -125,49 +126,81 @@
             </div>
         </section>
 
-        <section class="self-care-challenge" aria-labelledby="challenge-heading">
+        <section class="focus-timer" id="focus-timer" aria-labelledby="timer-heading" data-focus-timer>
+            <div class="timer-copy">
+                <p class="eyebrow">ONE THING AT A TIME</p>
+                <h2 id="timer-heading">A little room to focus.</h2>
+                <p>Choose a study session, a short break or a one-minute pause. Start, pause and reset whenever you need to.</p>
+                <a href="article-mindful-studying.html" class="text-link">Explore mindful studying →</a>
+            </div>
+            <div class="timer-controls" data-js-only hidden>
+                <label for="timer-length">Make time for</label>
+                <select id="timer-length"><option value="1500">25 minutes of focus</option><option value="300">A 5-minute break</option><option value="60">A 1-minute pause</option></select>
+                <p class="timer-display" data-timer-display role="timer" aria-label="Time remaining" aria-live="off">25:00</p>
+                <progress max="1500" value="0" aria-label="Session progress"></progress>
+                <div class="timer-actions"><button type="button" class="submit-button" data-timer-start>Start timer</button><button type="button" class="secondary-button" data-timer-reset>Reset timer</button></div>
+                <p class="interaction-status" role="status" data-timer-status>Ready when you are.</p>
+            </div>
+            <noscript><p>Enable JavaScript to use the focus timer.</p></noscript>
+        </section>
+
+        <section class="self-care-challenge" aria-labelledby="challenge-heading" data-challenge>
             <h2 id="challenge-heading">7-Day Self-Care Challenge</h2>
+            <div class="challenge-progress" data-js-only hidden><p role="status" data-challenge-summary>0 of 7 complete. Go at your own pace.</p><progress value="0" max="7" aria-label="Completed challenge days"></progress><p class="storage-note" data-storage-note></p></div>
             <div class="challenge-grid">
                 <div class="day-card">
                     <h3>Day 1</h3>
                     <p>Digital detox for 1 hour before bed</p>
+                    <button type="button" class="secondary-button" data-complete-day="1" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
                 <div class="day-card">
                     <h3>Day 2</h3>
                     <p>Try a 5-minute mindfulness exercise</p>
+                    <button type="button" class="secondary-button" data-complete-day="2" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
                 <div class="day-card">
                     <h3>Day 3</h3>
                     <p>Connect with a friend or family member</p>
+                    <button type="button" class="secondary-button" data-complete-day="3" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
                 <div class="day-card">
                     <h3>Day 4</h3>
                     <p>Prepare a healthy meal</p>
+                    <button type="button" class="secondary-button" data-complete-day="4" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
                 <div class="day-card">
                     <h3>Day 5</h3>
                     <p>Take a walk in nature</p>
+                    <button type="button" class="secondary-button" data-complete-day="5" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
                 <div class="day-card">
                     <h3>Day 6</h3>
                     <p>Write down 3 things you're grateful for</p>
+                    <button type="button" class="secondary-button" data-complete-day="6" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
                 <div class="day-card">
                     <h3>Day 7</h3>
                     <p>Reflect on what self-care practices worked best</p>
+                    <button type="button" class="secondary-button" data-complete-day="7" data-js-only hidden aria-pressed="false">Mark complete</button>
                 </div>
             </div>
         </section>
 
         <aside class="self-care-newsletter" aria-labelledby="newsletter-heading">
-            <h2 id="newsletter-heading">Get Weekly Self-Care Tips</h2>
-            <form action="#" method="post" class="newsletter-form" aria-describedby="demo-form-note">
-                <p id="demo-form-note" class="demo-note">Form demonstration — submissions are unavailable.</p>
-                <label for="selfcare-email">Email Address:</label>
-                <input type="email" id="selfcare-email" name="email" required placeholder="your.email@example.com" disabled>
-                <button type="submit" class="submit-button" disabled>Subscribe</button>
+            <h2 id="newsletter-heading">Build a little reading plan</h2>
+            <p>Choose a topic and find your next small read.</p>
+            <form action="articles.html" method="get" class="newsletter-form reading-plan-form" data-reading-plan>
+                <label for="reading-topic">What would you like to explore?</label>
+                <select id="reading-topic" name="topic">
+                    <option value="stress">Study stress &amp; balance</option>
+                    <option value="anxiety">Understanding anxiety</option>
+                    <option value="depression">Understanding depression</option>
+                    <option value="mindfulness">Mindful studying</option>
+                    <option value="sleep">Rest &amp; sleep</option>
+                </select>
+                <button type="submit" class="submit-button">Build my reading plan</button>
             </form>
-            <p>Receive practical self-care strategies tailored for students</p>
+            <div class="reading-plan-result" data-plan-result tabindex="-1" hidden></div>
         </aside>
     </main>
 
